@@ -1,0 +1,54 @@
+/* Page d'accueil */
+body {
+    background-image: url("/totolist/Images/Font.webp");
+    background-repeat: repeat-x ;
+}
+    /* Titre et menu de navigation */
+
+
+    h1 {
+        text-align: center;
+        font-size: 100px;
+        margin : auto;
+        color : orange;
+    }
+
+    #menu-barre {
+        display: flex;
+        gap : 20px;
+        justify-content : center;
+        background-color: white;
+        margin: 0px 100px 0 100px;
+        padding : 0 10px 0 10px;
+    }
+    .menu-lien {
+        text-decoration: none;
+        font-size : 25px;
+        color : orange;
+    }
+
+    /* Formulaire de saisie du prénom */
+    form {
+        display: flex;
+        margin : 20px 100px 0 100px;
+        padding: 20px;
+        border:solid;
+        justify-content: left;
+        font-size: 30px;
+        background-color: aqua;
+        gap : 50px;
+    }
+
+    #btn-prenom:hover {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    #prenom input {
+        font-size : 200px
+    }
+
+    #attention-prenom  {
+        font-size : 11px;
+        color : red;
+    }

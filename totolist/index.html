@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <script src ="script.js" defer></script>
+    <title>To do list</title>
+</head>
+<body>
+    <!--Titre et menu de navigation-->
+    <header>
+        <h1>To Do List</h1>
+        <nav id = "menu-barre">
+            <ul><a class = "menu-lien" href = "#">Accueil</a></ul>
+            <ul><a class = "menu-lien" href = "listedestaches.html">Liste des tâches</a></ul>
+            <ul><a class = "menu-lien" href = "#">Statistiques</a></ul>
+        </nav>
+    </header>
+    <!--Formulaire de saisie du prénom-->
+    <section>
+        <form id = "form-prenom">
+            <label for = "prenom">Veuillez entrer votre prénom</label>
+            <input type = "text" name = "prenom" id = "prenom">
+            <button id = "btn-prenom">Voir la liste des tâches</button>
+            <p id ="attention-prenom"></p>
+        </form>
+    </section>
+
+</body>
+</html>
