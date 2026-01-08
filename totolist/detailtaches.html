@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Détail des tâches</title>
+    <script type ="module" src ="scriptdetailtaches.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!--Titre et menu de navigation-->
+    <header class = "bg-white shadow fixed w-full">
+        <div class = "container flex justify-between items-center p-4">
+            <h1 class = "text-2xl font-bold text-indigo-600">EM SERVICES</h1>
+            <nav class = "text-right">
+                <button id = "btn-menu" aria-expanded="false" aria-controls="menu" class = "md:hidden text-gray-700 hover:text-indigo-600">☰</button>
+                <ul id = "menu" class = "gap-6 font-medium hidden rounded-xl bg-gray-600 text-white p-2 md:flex md:bg-white md:text-gray-700">
+                    <li><a class = "hover:text-indigo-600" href = "index.html">Accueil</a></li>
+                    <li><a class = "hover:text-indigo-600" href = "listedestaches.html">Liste des tâches</a></li>
+                    <li><a class = "hover:text-indigo-600" href = "statistiques.html">Statistiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!--Détail de la tâches-->
+    <main class = "pt-37 md:pt-20">
+        <!-- Introduction de la page liste des tâches -->
+        <section class = "bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5 text-2xl text-center">
+            <div class = "container mx-auto text-center px-4">
+                <h1 class = "text-4xl font-bold mb-4">Détail de la tâche</h1>
+                <p id = "nomtache" class = "text-lg mb-2"></p>
+            </div>
+        </section>
+        <section id = "detailtache" class = "grid gap-3">
+            <div class = "grid gap-3 my-4 px-5">
+                <button id = "btn-retour" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600 max-w-sm">Retourner à la liste des tâches</button>
+                <!-- Sera rempli via Java Script-->
+                <div class = "flex gap-2">
+                    <p class = "font-bold">Créé le :</p>
+                    <p id = "date"></p>
+                </div>
+                <div class = "flex gap-2">
+                    <p class = "font-bold">Tags :</p>
+                    <p id = "tag"></p>
+                </div>
+                <div class = "flex gap-2">
+                    <p class = "font-bold">Statut de la tâche :</p>
+                    <p id = "statut"></p>
+                </div>
+                <button id= "btn-statut" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600 max-w-sm"></button>
+                <button id = "btn-supprimer" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600 max-w-sm">Supprimer la tâche</button>
+            </div>
+        </section>
+    </main>
+
+
+        <!-- Pied de page -->
+    <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
+        <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
+    </footer>
+
+    <!-- Menu responsive -->
+     <script>
+        const btnMenu = document.getElementById("btn-menu")
+        const menu = document.getElementById("menu")
+        btnMenu.addEventListener("click", () => {
+            menu.classList.toggle("hidden")
+        })
+     </script>
+
+</body>

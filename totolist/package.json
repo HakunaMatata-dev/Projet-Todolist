@@ -1,10 +1,11 @@
 {
   "name": "qcm",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ce projet est le backend pour l'application Todo List, destiné aux étudiants du Learning Campus pour le développement de projets frontend. Il fournit une API RESTful pour gérer une liste de tâches (todos).",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,10 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
-  }
+  },
+  "type": "commonjs"
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Statistiques</title>
+    <script type = "module" src ="scriptstatistiques.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <!--Titre et menu de navigation-->
+    <header class = "bg-white shadow fixed w-full">
+        <div class = "container flex justify-between items-center p-4">
+            <h1 class = "text-2xl font-bold text-indigo-600">EM SERVICES</h1>
+            <nav class = "text-right">
+                <button id = "btn-menu" aria-expanded="false" aria-controls="menu" class = "md:hidden text-gray-700 hover:text-indigo-600">☰</button>
+                <ul id = "menu" class = "gap-6 font-medium hidden rounded-xl bg-gray-600 text-white p-2 md:flex md:bg-white md:text-gray-700">
+                    <li><a class = "hover:text-indigo-600" href = "index.html">Accueil</a></li>
+                    <li><a class = "hover:text-indigo-600" href = "listedestaches.html">Liste des tâches</a></li>
+                    <li><a class = "hover:text-indigo-600" href = "statistiques.html">Statistiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "pt-37 md:pt-20">
+        <!-- Introduction de la page Statistiques -->
+        <section class = "bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5 text-2xl text-center">
+            <div class = "container mx-auto text-center px-4">
+                <h2 class = "text-4xl font-bold mb-4">Statistiques</h1>
+                <p class ="text-lg mb-6">Bienvenue sur la page des statistiques de la To Do List</p>
+                <img src ="Images/Font.jpg" alt="Image ToDoList" class = "mt-10 mx-auto rounded-full shadow-lg size-50">
+            </div>
+        </section>
+        <!-- Graphique des statistiques -->
+        <section>
+            <div class = "max-w-lg max-h-lg mx-auto my-3">
+                <p class = "text-2xl font-bold mb-4 text-center">Analyse des tâches terminées par rapport aux tâches à réaliser</p>
+                <canvas id="myPieChart"></canvas>
+            </div>
+        </section>
+   
+   
+   
+        
+   
+    </main>
+
+    <!-- Pied de page -->
+    <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
+        <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
+    </footer>
+
+    <!-- Menu responsive -->
+     <script>
+        const btnMenu = document.getElementById("btn-menu")
+        const menu = document.getElementById("menu")
+        btnMenu.addEventListener("click", () => {
+            menu.classList.toggle("hidden")
+        })
+     </script>
+
+</body>
+</html>

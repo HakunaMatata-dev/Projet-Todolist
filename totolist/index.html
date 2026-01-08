@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
-    <script src ="script.js" defer></script>
-    <title>To do list</title>
+    <script src ="scriptindex.js" defer></script>
+    <title>To Do List - Accueil</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!--Titre et menu de navigation-->
-    <header>
-        <h1>To Do List</h1>
-        <nav id = "menu-barre">
-            <ul><a class = "menu-lien" href = "#">Accueil</a></ul>
-            <ul><a class = "menu-lien" href = "listedestaches.html">Liste des tâches</a></ul>
-            <ul><a class = "menu-lien" href = "#">Statistiques</a></ul>
-        </nav>
+    <header class = "bg-white shadow fixed w-full">
+        <div class = "container flex justify-between items-center p-4">
+            <h1 class = "text-2xl font-bold text-indigo-600">EM SERVICES</h1>
+            <nav class = "text-right">
+                <button id = "btn-menu" aria-expanded="false" aria-controls="menu" class = "md:hidden text-gray-700 hover:text-indigo-600">☰</button>
+                <ul id = "menu" class = "gap-6 font-medium hidden rounded-xl bg-gray-600 text-white p-2 md:flex md:bg-white md:text-gray-700">
+                    <li><a class = "hover:text-indigo-600" href = "index.html">Accueil</a></li>
+                    <li><a class = "hover:text-indigo-600" href = "listedestaches.html">Liste des tâches</a></li>
+                    <li><a class = "hover:text-indigo-600" href = "statistiques.html">Statistiques</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <!--Formulaire de saisie du prénom-->
-    <section>
-        <form id = "form-prenom">
-            <label for = "prenom">Veuillez entrer votre prénom</label>
-            <input type = "text" name = "prenom" id = "prenom">
-            <button id = "btn-prenom">Voir la liste des tâches</button>
-            <p id ="attention-prenom"></p>
-        </form>
-    </section>
+    <main class ="pt-37 md:pt-20">
+        <!-- Introduction de la page d'accueil -->
+        <section id ="accueil" class ="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5">
+            <div class = "container mx-auto text-center px-4">
+                <h1 class = "text-4xl font-bold mb-4">To Do List</h1>
+                <p class ="text-lg mb-6">Bienvenue sur la To Do List de EM SERVICES !</p>
+                <img src ="Images/Font.jpg" alt="Image ToDoList" class = "mt-10 mx-auto rounded-full shadow-lg size-50">
+            </div>
+        </section>
+        <!--Formulaire de saisie du prénom-->
+        <section class = "gap-4 bg-gray-300 my-6 mx-auto px-2 py-5 md:px-30">
+            <h2 class = "text-2xl font-bold mb-4">Accéder à la liste des tâches</h2>
+            <form id = "form-prenom" class = "grid py-2 gap-2 border-2 px-10 rounded-xl 2xl:py-5 2xl:gap-10 2xl:flex">
+                <label for = "prenom" class = "flex items-center">Veuillez entrer votre prénom</label>
+                <input type = "text" name = "prenom" id = "prenom" class = "bg-white border-1 rounded-xl px-10 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button id = "btn-prenom" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600">Voir la liste des tâches</button>
+                <p id ="attention-prenom" class = "flex items-center text-red-600"></p>
+            </form>
+        </section>
+
+    </main>
+    <!-- Pied de page -->
+    <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
+        <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
+    </footer>
+
+    <!-- Menu responsive -->
+     <script>
+        const btnMenu = document.getElementById("btn-menu")
+        const menu = document.getElementById("menu")
+        btnMenu.addEventListener("click", () => {
+            menu.classList.toggle("hidden")
+        })
+     </script>
 
 </body>
 </html>
