@@ -25,43 +25,45 @@
         </div>
     </header>
     
-    <!--Détail de la tâches-->
-    <main class = "pt-37 md:pt-20">
-        <!-- Introduction de la page liste des tâches -->
-        <section class = "bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5 text-2xl text-center">
-            <div class = "container mx-auto text-center px-4">
-                <h2 class = "text-4xl font-bold mb-4">Détail de la tâche</h2>
-                <p id = "nomtache" class = "text-lg mb-2"></p>
-            </div>
-        </section>
-        <section id = "detailtache" class = "grid gap-3">
-            <div class = "grid gap-3 my-4 px-5">
-                <button id = "btn-retour" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600 max-w-sm">Retourner à la liste des tâches</button>
-                <!-- Sera rempli via Java Script-->
-                <div class = "flex gap-2">
-                    <p class = "font-bold">Créé le :</p>
-                    <p id = "date"></p>
+    <!-- div englobant main et footer -->
+    <div class = "min-h-screen flex flex-col">
+        <!--Détail de la tâches-->
+        <main class = "pt-20 flex-grow">
+            <!-- Introduction de la page liste des tâches -->
+            <section class = "bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5 text-2xl text-center">
+                <div class = "container mx-auto text-center px-4">
+                    <h2 class = "text-4xl font-bold mb-4">Détail de la tâche</h2>
+                    <p id = "nomtache" class = "text-lg mb-2"></p>
                 </div>
-                <div class = "flex gap-2">
-                    <p class = "font-bold">Tags :</p>
-                    <p id = "tag"></p>
+            </section>
+            <section id = "detailtache" class = "grid gap-3 justify-center my-10">
+                <div class = "grid gap-3 max-w-2xl">
+                    <button id = "btn-retour" class = "bg-gray-300 font-semibold px-6 py-3 rounded-xl border-1 hover:text-white ">Retourner à la liste des tâches</button>
+                    <!-- Sera rempli via Java Script-->
+                    <div class = "flex gap-2">
+                        <p class = "font-bold">Créé le :</p>
+                        <p id = "date"></p>
+                    </div>
+                    <div class = "flex gap-2">
+                        <p class = "font-bold">Tags :</p>
+                        <p id = "tag"></p>
+                    </div>
+                    <div class = "flex gap-2">
+                        <p class = "font-bold">Statut de la tâche :</p>
+                        <p id = "statut"></p>
+                    </div>
+                    <button id= "btn-statut" class = "font-semibold px-6 py-3 rounded-xl border-1 hover:text-white"></button>
+                    <button id = "btn-supprimer" class = "bg-red-400 font-semibold px-6 py-3 rounded-xl border-1 hover:text-white">Supprimer la tâche</button>
                 </div>
-                <div class = "flex gap-2">
-                    <p class = "font-bold">Statut de la tâche :</p>
-                    <p id = "statut"></p>
-                </div>
-                <button id= "btn-statut" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600 max-w-sm"></button>
-                <button id = "btn-supprimer" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600 max-w-sm">Supprimer la tâche</button>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
 
-        <!-- Pied de page -->
-    <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
-        <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
-    </footer>
-
+            <!-- Pied de page -->
+        <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
+            <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
+        </footer>
+        </div>
     <!-- Menu responsive -->
      <script>
         const btnMenu = document.getElementById("btn-menu")

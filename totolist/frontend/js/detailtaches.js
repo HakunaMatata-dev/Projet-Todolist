@@ -27,9 +27,11 @@
                 if (data.is_complete === true) {
                     statut = "Terminé"
                     boutonStatut = "Réouvrir la tâche"
+                    baliseBoutonStatut.classList.add('bg-blue-300')
                 } else {
                     statut = "A faire"
                     boutonStatut = "Cloturer tâche"
+                    baliseBoutonStatut.classList.add('bg-green-300')
                 }                      
                 const valeurStatut = `${statut}`
                 baliseStatut.textContent = valeurStatut

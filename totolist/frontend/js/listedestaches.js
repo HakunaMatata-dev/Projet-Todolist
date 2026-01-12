@@ -14,6 +14,7 @@
                 // Créer ligne tableau
                 let ligne = document.createElement("tr")
                 ligne.className = "ligne"
+                ligne.classList.add('odd:bg-white', 'even:bg-gray-300')
 
                 // Créer cellule texte
                 let celluletext = document.createElement("td")
