@@ -14,7 +14,7 @@
             const params = new URLSearchParams(window.location.search)
             const id = params.get ('id')
         // Envoi des données
-            fetch((`https://projet-todolist-one.vercel.app/${id}`), {
+            fetch((`https://projet-todolist-one.vercel.app/todos/${id}`), {
                 method : "DELETE",
                 headers: {"Content-type":"application/json"},
             })
@@ -42,7 +42,7 @@
         // Modification du statut et envoi des données
         let listeafaire
         let nouvelleValeur
-        fetch('https://projet-todolist-one.vercel.app')
+        fetch('https://projet-todolist-one.vercel.app/todos')
             .then (response => response.json())
             .then (data => {
                 listeafaire = data
@@ -54,7 +54,7 @@
             })
             .then (() => {
                 console.log(nouvelleValeur)
-                return fetch(`https://projet-todolist-one.vercel.app/${id}`, {
+                return fetch(`https://projet-todolist-one.vercel.app/todos/${id}`, {
                     method: "PUT",
                     headers: {"Content-type": "application/json"},
                     body: JSON.stringify({is_complete: nouvelleValeur})
