@@ -3,7 +3,7 @@
         let qteTotale
         let qteTerminee = 0
         let qteEncours
-        fetch('https://projet-todolist-one.vercel.app/todos')
+        fetch('https://projet-todolist-one.vercel.app')
         .then (data => data.json())
         .then (data => {
             // Récupérer la quantité totale
