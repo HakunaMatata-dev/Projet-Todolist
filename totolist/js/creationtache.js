@@ -27,7 +27,7 @@
             {text : nomtache, created_at : aujourdhui, Tags : [tag1,tag2], is_complete : false}
         ]
         // Envoi des données
-        fetch('http://localhost:3000/todos', {
+        fetch('https://projet-todolist-one.vercel.app/todos', {
             method : "POST",
             headers: {"Content-type":"application/json"},
             body : JSON.stringify(data[0])
