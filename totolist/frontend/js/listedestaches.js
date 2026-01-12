@@ -1,6 +1,6 @@
 // Récupérer et envoyer API de liste des tâches  
     const majtableau = function() {
-        fetch('https://projet-todolist-one.vercel.app/todos')
+        fetch('https://todolist-backend-drab.vercel.app/todos')
         .then (data => data.json())
         .then (listeafaire => {
 

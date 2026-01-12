@@ -2,10 +2,10 @@
     // Récupérer l'ID
         const params = new URLSearchParams(window.location.search)
         const id = params.get ('id')
-        const urlId = `https://projet-todolist-one.vercel.app/todos/${id}`
+        const urlId = `https://todolist-backend-drab.vercel.app/todos/${id}`
     // Remplir les données
         //Récupérer les données
-            fetch(`https://projet-todolist-one.vercel.app/todos/${id}`)
+            fetch(`https://todolist-backend-drab.vercel.app/todos/${id}`)
             .then (data => data.json())
             .then (data => {
                 // Remplir la tache
