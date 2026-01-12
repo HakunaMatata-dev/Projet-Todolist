@@ -23,32 +23,36 @@
             </nav>
         </div>
     </header>
-    <main class ="pt-37 md:pt-20">
-        <!-- Introduction de la page d'accueil -->
-        <section id ="accueil" class ="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5">
-            <div class = "container mx-auto text-center px-4">
-                <h2 class = "text-4xl font-bold mb-4">To Do List</h2>
-                <p class ="text-lg mb-6">Bienvenue sur la To Do List de EM SERVICES !</p>
-                <img src ="Images/Font.jpg" alt="Image ToDoList" class = "mt-10 mx-auto rounded-full shadow-lg size-50">
-            </div>
-        </section>
-        <!--Formulaire de saisie du prénom-->
-        <section class = "gap-4 bg-gray-300 my-6 mx-auto px-2 py-5 md:px-30">
-            <h2 class = "text-2xl font-bold mb-4">Accéder à la liste des tâches</h2>
-            <form id = "form-prenom" class = "grid py-2 gap-2 border-2 px-10 rounded-xl 2xl:py-5 2xl:gap-10 2xl:flex">
-                <label for = "prenom" class = "flex items-center">Veuillez entrer votre prénom</label>
-                <input type = "text" name = "prenom" id = "prenom" class = "bg-white border-1 rounded-xl px-10 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                <button id = "btn-prenom" class = "bg-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-indigo-600">Voir la liste des tâches</button>
-                <p id ="attention-prenom" class = "flex items-center text-red-600"></p>
-            </form>
-        </section>
 
-    </main>
-    <!-- Pied de page -->
-    <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
-        <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
-    </footer>
-
+    <!-- div englobant main et footer -->
+    <div class = "min-h-screen flex flex-col">
+        <main class ="pt-20 lg:flex-grow lg:flex">
+            <!-- Introduction de la page d'accueil -->
+            <section id ="accueil" class ="flex justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-5 lg:grow-5">
+                <div class = "flex flex-col justify-center text-center px-4">
+                    <h2 class = "text-5xl font-bold mb-4 lg:text-7xl">To Do List</h2>
+                    <p class ="text-xl mb-3 lg:mb-6 lg:text-3xl">Bienvenue sur la To Do List de EM SERVICES !</p>
+                    <img src ="Images/Font.jpg" alt="Image ToDoList" class = "size-30 mx-auto rounded-full shadow-lg lg:size-80">
+                </div>
+            </section>
+            <!--Formulaire de saisie du prénom-->
+            <section class = "flex justify-center items-center bg-white mx-10">
+                <div class = "text-indigo-500 my-5 text-center">
+                    <h2 class = "text-3xl font-bold py-2">Connexion</h2>
+                    <form id = "form-prenom" class = "flex flex-col text-lg w-sm">
+                        <label for = "prenom" class = "py-2">Veuillez entrer votre prénom</label>
+                        <input type = "text" name = "prenom" id = "prenom" class = "my-2 py-1 text-black bg-indigo-200 border-2xl rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <p id ="attention-prenom" class = "text-sm  my-1 px-3 py-1 items-center text-red-600"></p>
+                        <button id = "btn-prenom" class = "bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl border-1 hover:text-black">Voir la liste des tâches</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- Pied de page -->        
+        <footer class = "bg-gray-800 text-gray-400 py-6 text-center">
+            <p>© 2026 Propriété de EM SERVICES & Web-Dev company <br> Tous droits réservés</p>
+        </footer>
+    </div>
     <!-- Menu responsive -->
      <script>
         const btnMenu = document.getElementById("btn-menu")
